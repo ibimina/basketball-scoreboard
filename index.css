@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+    background-color: rgb(240, 232, 232);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(14, 14, 59);
+    border-radius: 20px;
+/* gap: 4rem; */
+    padding: 5rem 1rem;
+    /* min-width: 360px; */
+width:100%;
+margin:0 2rem;
+}
+h3{
+    color: white;
+}
+.homeScore,.guestScore{
+    font-size: 2rem;
+    color: #fff;
+   
+}
+.home,.guest{
+    width: 100%;
+}
+button{
+padding: .8rem 1.3rem;
+border-radius: 10px;
+color: rgb(156, 156, 224);
+background-color: rgb(24, 24, 68);
+border: 1px solid rgb(197, 197, 202);
+cursor: pointer;
+font-weight: 900;
+font-size: 1rem;
+}
+button:hover{
+    color: #fff;
+    background-color: green;
+    border: 1px solid white;
+    /* font-weight: 900; */
+
+}
+.btnwrap button{
+    margin-right: .5rem;
+}
+.diff{
+    text-transform: uppercase;
+    color: #fff;
+    
+}
+.newgame{
+    width: 100%;
+}
+.game{
+    /* border: 1px solid white; */
+    border: 0;
+    font-weight: 900;
+text-transform: uppercase;
+background-color: red;
+color: white;
+cursor: pointer;
+
+}
+.game:hover{
+    color: red;
+    background-color: #fff;
+
+}
+@media (min-width:55rem) {
+    .container{
+        padding-inline: 0rem;
+        max-width: 800px;
+        gap:0rem
+    }
+}
