@@ -35,16 +35,33 @@ if (homeScore.textContent === guestScore.textContent) {
   homeScore.style.color = "yellow";
     guestScore.style.color = "yellow";
     diff.textContent = 'Draw';
-} else if (homeScore.textContent > guestScore.textContent) {
+} else if (Number(homeScore.textContent) > Number(guestScore.textContent)) {
   homeScore.style.color = "green";
   guestScore.style.color ="red"
-diff.textContent =  `home is leading with ${homeScore.textContent - guestScore.textContent} points`
-} else if (homeScore.textContent < guestScore.textContent) {
+  if (Number(homeScore.textContent) - Number(guestScore.textContent) === 1) {
+  diff.textContent = `home leads with ${
+    Number(homeScore.textContent) - Number(guestScore.textContent)
+  } point`;
+  }else{
+diff.textContent = `home leads with ${
+  Number(homeScore.textContent) - Number(guestScore.textContent)
+} points`;
+  }
+
+} else if (Number(guestScore.textContent) > Number(homeScore.textContent)) {
   homeScore.style.color = "red";
   guestScore.style.color = "green";
-  diff.textContent = `Guest is leading with ${
-    guestScore.textContent - homeScore.textContent
-  } points`;
+
+   if ( Number(guestScore.textContent ) - Number(homeScore.textContent) === 1) {
+     diff.textContent = `Guest leads with ${
+       Number(guestScore.textContent) - Number(homeScore.textContent)
+     } point`;
+   } else {
+     diff.textContent = `Guest leads with ${
+       Number(guestScore.textContent) - Number(homeScore.textContent)
+     } points`;
+   }
+  
 }
 
 }
